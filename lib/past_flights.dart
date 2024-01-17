@@ -61,7 +61,7 @@ class PastFlightsState extends State<PastFlights> {
                     var date = DateTime.fromMillisecondsSinceEpoch(
                         flight["Date"]["\$date"]);
                     String dateString =
-                        '${date.day.toString().padLeft(2, '0')}-${date.month.toString().padLeft(2, '0')}-${date.year} ${date.hour.toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')}';
+                        '${date.day.toString().padLeft(2, '0')}-${date.month.toString().padLeft(2, '0')}-${date.year}';
                     return DataRow(
                       cells: [
                         DataCell(Text(dateString)),

@@ -25,7 +25,7 @@ class SelectFlightState extends State<SelectFlight> {
   void initState() {
     super.initState();
     _flightPlans = apiService.fetchFlightPlans();
-    apiService.checkConnection();
+    //apiService.checkConnection();
   }
 
   void changeScreen(Map flightPlan) {

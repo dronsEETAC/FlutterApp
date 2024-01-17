@@ -62,7 +62,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.flight, color: Colors.orange, size: 30),
-              title: const Text('Select Flight',
+              title: const Text('Select Flight Plan',
                   style: TextStyle(
                     color: Colors.orange,
                     fontSize: 18,

@@ -655,51 +655,57 @@ class MainScreenState extends State<MainScreen> {
     _isLoopClosed = true;
   }
 
-  void sendFlightPlan1(String flightPlanTitle) async {
+  void sendFlightPlan(String flightPlanTitle) async {
     //var success = await apiService.getFlightPlan(flightPlanTitle);
     Map<String, dynamic> data = {
       "Title": flightPlanTitle,
       "waypoints": newWaypoints
     };
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Connecting to the drone'),
+        duration: Duration(seconds: 5),
+      ),
+    );
     mqttClientManager.publishMessage(
         "mobileApp/autopilotService/executeFlightPlanMobileApp",
         json.encode(data));
   }
 
-  void sendFlightPlan(
-      List<dynamic> flightWaypoints, List<dynamic> picsWaypoints) async {
-    List waypoints = [];
+  // void sendFlightPlan(
+  //     List<dynamic> flightWaypoints, List<dynamic> picsWaypoints) async {
+  //   List waypoints = [];
 
-    for (var waypoint in flightWaypoints) {
-      // Create a copy of the waypoint
-      var newWaypoint = Map.from(waypoint);
-      newWaypoint.remove('height');
-      // Add the 'takePic' attribute
-      newWaypoint['takePic'] = picsWaypoints.any((picWaypoint) =>
-          picWaypoint['lat'] == waypoint['lat'] &&
-          picWaypoint['lon'] == waypoint['lon']);
+  //   for (var waypoint in flightWaypoints) {
+  //     // Create a copy of the waypoint
+  //     var newWaypoint = Map.from(waypoint);
+  //     newWaypoint.remove('height');
+  //     // Add the 'takePic' attribute
+  //     newWaypoint['takePic'] = picsWaypoints.any((picWaypoint) =>
+  //         picWaypoint['lat'] == waypoint['lat'] &&
+  //         picWaypoint['lon'] == waypoint['lon']);
 
-      waypoints.add(newWaypoint);
-    }
-    if (apiService.isConnected) {
-      final success = await apiService.callApiFlightPlan(waypoints);
-      if (success) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Executing Flight Plan'),
-            duration: Duration(seconds: 2),
-          ),
-        );
-      }
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Not connected to the broker.'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-    }
-  }
+  //     waypoints.add(newWaypoint);
+  //   }
+  //   if (apiService.isConnected) {
+  //     final success = await apiService.callApiFlightPlan(waypoints);
+  //     if (success) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(
+  //           content: Text('Executing Flight Plan'),
+  //           duration: Duration(seconds: 2),
+  //         ),
+  //       );
+  //     }
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(
+  //         content: Text('Not connected to the broker.'),
+  //         duration: Duration(seconds: 2),
+  //       ),
+  //     );
+  //   }
+  // }
 
   void showPhotoGallery(Map flight) {
     Navigator.push(
@@ -741,6 +747,14 @@ class MainScreenState extends State<MainScreen> {
           ),
         );
       }
+      if (c[0].topic == "autopilotService/mobileApp/connectedAutopilot") {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Drone connected correctly. Starting flight'),
+            duration: Duration(seconds: 3),
+          ),
+        );
+      }
     });
   }
 
@@ -774,7 +788,7 @@ class MainScreenState extends State<MainScreen> {
                   onPressed: () {
                     //sendFlightPlan(widget.flightPlan!["FlightWaypoints"],
                     //    widget.flightPlan!["PicsWaypoints"]);
-                    sendFlightPlan1(widget.flightPlan!["Title"]);
+                    sendFlightPlan(widget.flightPlan!["Title"]);
                   },
                   child: const Text('Execute Flight Plan'),
                 ),
