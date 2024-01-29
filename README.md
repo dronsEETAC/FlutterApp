@@ -8,6 +8,7 @@
 4. [Getting Started](#getting-started)
 5. [Set Up](#set-up)
 6. [Usage](#usage)
+7. [Demo Flutter](#demo-flutter)
 
 ## Introduction
 
@@ -87,6 +88,17 @@ For example, in the following picture two images can be seen, as it was expected
 
 <img src="https://github.com/JordiLlaveria/FlutterDEE/blob/manager/assets/See%20images.PNG" width="200" height="400">
 
+## Demo Flutter
 
+In order to be able to see a real simulation of an execution of a planned flight, the following demo performs the complete process of creating a flight plan:
+
+[Demo Flutter](https://www.youtube.com/watch?v=AMLKRCThTbs&t=150s&ab_channel=DronsEETAC)
+
+In the video:
+1. Using Dashboard, a flight plan is created using functionality "Fix waypoints by hand".
+2. Once the flight plan is saved in ground backend, it is sent to air backend using "Save in Drone" button.
+3. Using the Flutter application, all the flight plans collected in air backend can be seen, and one of them is selected for its execution.
+4. With the help of Mission Planner, the flight is followed over all its waypoints, taking the required images or videos when asked.
+5. When the flight has landed, and using functionality "Past flights" in Flutter application, data collected, and already saved in ground backend, can be seen and analyzed.
 
 
