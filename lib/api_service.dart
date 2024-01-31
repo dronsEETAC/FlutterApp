@@ -32,51 +32,6 @@ class ApiService {
     }
   }
 
-  // Future<void> connectBroker() async {
-  //   var url = Uri.parse('http://$ipAddrGround/connect');
-  //   var response = await http.get(url);
-
-  //   if (response.statusCode == 200) {
-  //     debugPrint('Successfully connected to the broker.');
-  //     isConnected = true;
-  //   } else {
-  //     debugPrint(
-  //         'Failed to connect to the broker: ${response.statusCode}: ${response.body}');
-  //   }
-  // }
-
-  // Future<String> getFlightPlan(String title) async {
-  //   var url = Uri.parse('http://$ipAddrAir/get_flight_plan/$title');
-  //   var response =
-  //       await http.get(url, headers: {'Content-Type': 'application/json'});
-
-  //   if (response.statusCode == 200) {
-  //     var data = jsonDecode(response.body);
-  //     return data;
-  //   } else {
-  //     var data = "No flightPlan";
-  //     return data;
-  //   }
-  // }
-
-  // Future<bool> callApiFlightPlan(List waypoints) async {
-  //   var url = Uri.parse('http://$ipAddrGround/executeFlightPlan');
-  //   var response = await http.post(
-  //     url,
-  //     headers: {"Content-Type": "application/json"},
-  //     body: json.encode(waypoints),
-  //   );
-
-  //   if (response.statusCode == 200) {
-  //     debugPrint('Successfully posted waypoints.');
-  //     return true;
-  //   } else {
-  //     debugPrint(
-  //         'Failed to post waypoints: ${response.statusCode}: ${response.body}');
-  //     return false;
-  //   }
-  // }
-
   Future<List<dynamic>> fetchFlightPlans() async {
     // Voy a los planes de vuelos que ya están cargados en la bbdd de aire
     final response =
@@ -100,26 +55,6 @@ class ApiService {
     }
   }
 
-  // Future<List<dynamic>> fetchPastFlightsData(var flightplan_id) async {
-  //   final response = await http.get(
-  //       Uri.parse('http://$ipAddrGround/get_results_flight/' + flightplan_id));
-  //   if (response.statusCode == 200) {
-  //     var data = jsonDecode(response.body);
-  //     return data;
-  //   } else {
-  //     throw Exception('Failed to load flight plans');
-  //   }
-  // }
-
-  // Future<void> checkConnection() async {
-  //   var url = Uri.parse('http://$ipAddrGround/connection_status');
-  //   var response = await http.get(url);
-  //   if (response.statusCode == 200) {
-  //     var data = jsonDecode(response.body);
-  //     isConnected = data['is_connected'];
-  //   }
-  // }
-
   String getImageUrl(String imagePath) {
     return 'http://$ipAddrGround/media/pictures/$imagePath';
   }
@@ -131,6 +66,4 @@ class ApiService {
   String getThumbnailUrl(String videoPath) {
     return 'http://$ipAddrGround/thumbnail/$videoPath';
   }
-
-  // Add other API calls here
 }

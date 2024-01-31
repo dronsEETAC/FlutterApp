@@ -27,8 +27,6 @@ class ImageGallery extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           String imageUrl =
               apiService.getImageUrl(pictures[index]['namePicture']);
-          //final imagenEnEscalaDeGrises = Cv2.cvtColor(
-          //    pathString: imageUrl, outputType: Cv2.COLOR_BGR2GRAY);
           return GestureDetector(
             onTap: () {
               Navigator.push(

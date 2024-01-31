@@ -1,6 +1,5 @@
 import 'dart:io';
 
-//import 'package:mqtt_client/mqtt_browser_client.dart';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
 
@@ -15,9 +14,6 @@ enum MqttCurrentConnectionState {
 }
 
 class MQTTClientManager {
-  //MqttServerClient internal_client =
-  //    MqttServerClient.withPort('127.0.0.1', 'Phone_internal', 1884);
-
   MqttCurrentConnectionState connectionState = MqttCurrentConnectionState.IDLE;
   MqttSubscriptionState subscriptionState = MqttSubscriptionState.IDLE;
 
@@ -54,7 +50,6 @@ class MQTTClientManager {
 
   void subscribe(String topic) {
     print('Subscribing to the $topic topic');
-    //external_client.subscribe(topic, MqttQos.atLeastOnce);
     internal_client.subscribe(topic, MqttQos.atLeastOnce);
     subscriptionState = MqttSubscriptionState.SUBSCRIBED;
   }
@@ -88,29 +83,18 @@ class MQTTClientManager {
   }
 
   bool isConnected() {
-    //return external_client.connectionStatus!.state ==
-    //    MqttConnectionState.connected;
     return internal_client.connectionStatus!.state ==
         MqttConnectionState.connected;
   }
 
   void publishMessage(String topic, String message) {
-    //if (isConnected()) {
     final builder = MqttClientPayloadBuilder();
     builder.addString(message);
-    //Solo para hacer el primer test
     internal_client.publishMessage(
         topic, MqttQos.exactlyOnce, builder.payload!);
-
-    //external_client.publishMessage(topic, MqttQos.exactlyOnce, builder.payload!);
-    //internal_client.publishMessage(topic, MqttQos.exactlyOnce, builder.payload!);
-    //} else {
-    //  print("You are not connected");
-    //}
   }
 
   Stream<List<MqttReceivedMessage<MqttMessage>>>? getMessagesStream() {
-    //return external_client.updates;
     return internal_client.updates;
   }
 }

@@ -74,12 +74,6 @@ class SelectFlightState extends State<SelectFlight> {
                             _isConnecting = false;
                           });
                           apiService.isConnected = true;
-                          //mqttClientManager.onConnected();
-                          // apiService.connectBroker().then((_) {
-                          //   setState(() {
-                          //     _isConnecting = false;
-                          //   });
-                          // });
                         }
                       },
                       style: ButtonStyle(
@@ -103,12 +97,6 @@ class SelectFlightState extends State<SelectFlight> {
                       label: Text('Date'),
                     ),
                     DataColumn(label: Text('Title')),
-                    //DataColumn(
-                    //  label: Text('Pics'),
-                    //),
-                    //DataColumn(
-                    //  label: Text('Vids'),
-                    //),
                     DataColumn(
                       label: Text('Waypoints'),
                     ),
@@ -122,8 +110,6 @@ class SelectFlightState extends State<SelectFlight> {
                         DataCell(
                             Text('${date.day}-${date.month}-${date.year}')),
                         DataCell(Text(flightPlan['Title'].toString())),
-                        //DataCell(Text(flightPlan['NumPics'].toString())),
-                        //DataCell(Text(flightPlan['NumVids'].toString())),
                         DataCell(Text(flightPlan['NumWaypoints'].toString())),
                       ],
                       // When a row is clicked, send its flight plan

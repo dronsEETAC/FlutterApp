@@ -656,7 +656,6 @@ class MainScreenState extends State<MainScreen> {
   }
 
   void sendFlightPlan(String flightPlanTitle) async {
-    //var success = await apiService.getFlightPlan(flightPlanTitle);
     Map<String, dynamic> data = {
       "Title": flightPlanTitle,
       "waypoints": newWaypoints
@@ -671,41 +670,6 @@ class MainScreenState extends State<MainScreen> {
         "mobileApp/autopilotService/executeFlightPlanMobileApp",
         json.encode(data));
   }
-
-  // void sendFlightPlan(
-  //     List<dynamic> flightWaypoints, List<dynamic> picsWaypoints) async {
-  //   List waypoints = [];
-
-  //   for (var waypoint in flightWaypoints) {
-  //     // Create a copy of the waypoint
-  //     var newWaypoint = Map.from(waypoint);
-  //     newWaypoint.remove('height');
-  //     // Add the 'takePic' attribute
-  //     newWaypoint['takePic'] = picsWaypoints.any((picWaypoint) =>
-  //         picWaypoint['lat'] == waypoint['lat'] &&
-  //         picWaypoint['lon'] == waypoint['lon']);
-
-  //     waypoints.add(newWaypoint);
-  //   }
-  //   if (apiService.isConnected) {
-  //     final success = await apiService.callApiFlightPlan(waypoints);
-  //     if (success) {
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         const SnackBar(
-  //           content: Text('Executing Flight Plan'),
-  //           duration: Duration(seconds: 2),
-  //         ),
-  //       );
-  //     }
-  //   } else {
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       const SnackBar(
-  //         content: Text('Not connected to the broker.'),
-  //         duration: Duration(seconds: 2),
-  //       ),
-  //     );
-  //   }
-  // }
 
   void showPhotoGallery(Map flight) {
     Navigator.push(
@@ -786,8 +750,6 @@ class MainScreenState extends State<MainScreen> {
                 padding: const EdgeInsets.all(20.0),
                 child: ElevatedButton(
                   onPressed: () {
-                    //sendFlightPlan(widget.flightPlan!["FlightWaypoints"],
-                    //    widget.flightPlan!["PicsWaypoints"]);
                     sendFlightPlan(widget.flightPlan!["Title"]);
                   },
                   child: const Text('Execute Flight Plan'),
