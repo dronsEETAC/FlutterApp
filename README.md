@@ -87,8 +87,7 @@ The past flights screen allows you to select past flights and see the path as we
 
 For example, in the following picture two images can be seen, as it was expected to take one on waypoint number 1, and another in number 5
 
-<img src="https://github.com/JordiLlaveria/FlutterDEE/blob/manager/assets/See%20images.PNG" width="200" height="400">
-
+![See images](https://github.com/dronsEETAC/FlutterApp/assets/100842082/051f373c-45be-4e66-ba7b-b8a9894d45ca).
 ## Demo Flutter
 
 In order to be able to see a real simulation of an execution of a planned flight, the following demo performs the complete process of creating a flight plan:
