@@ -25,9 +25,9 @@ Before starting with the installation, make sure you have the following software
 
 The following modules are required for full functionality, or at least having connection to them:
 
-- Air RestApi [![RestApi Badge](https://img.shields.io/badge/DEE-RestApi-brightgreen.svg)](https://github.com/JordiLlaveria/GroundAPIRESTDEE)
-- Ground RestApi [![RestApi Badge](https://img.shields.io/badge/DEE-RestApi-brightgreen.svg)](https://github.com/JordiLlaveria/AirAPIRESTDEE)
-- AutopilotService [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-AutopilotService-brightgreen.svg)](https://github.com/JordiLlaveria/OnBoardServicesDEE)
+- Air APIREST [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-AirAPIREST-brightgreen.svg)](https://github.com/dronsEETAC/AirAPIREST)
+- Ground APIREST [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-GroundAPIREST-brightgreen.svg)](https://github.com/dronsEETAC/GroundAPIREST)
+- AutopilotService [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-AutopilotService-brightgreen.svg)](https://github.com/dronsEETAC/autopilotService)
 
 ## Installation
 
@@ -91,8 +91,8 @@ For example, in the following picture two images can be seen, as it was expected
 ## Demo Flutter
 
 In order to be able to see a real simulation of an execution of a planned flight, the following demo performs the complete process of creating a flight plan:
-
-[Demo Flutter](https://www.youtube.com/watch?v=AMLKRCThTbs&t=150s&ab_channel=DronsEETAC)
+      
+ [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-Demo_FlutterApp-pink.svg)](https://www.youtube.com/watch?v=AMLKRCThTbs&t=150s&ab_channel=DronsEETAC)
 
 In the video:
 1. Using Dashboard, a flight plan is created using functionality "Fix waypoints by hand".
