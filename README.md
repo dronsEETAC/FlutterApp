@@ -76,6 +76,8 @@ The select flight screen allows you to select flights plans from the database an
 
 <img src="https://github.com/JordiLlaveria/FlutterDEE/blob/manager/assets/Flight%20plans.PNG" width="200" height="400">
 
+![Flight plans](https://github.com/dronsEETAC/FlutterApp/assets/100842082/259b901f-f41e-4f82-87ec-71c3b21a6796)
+
 When a flight plan is selected, it is shown inside the map, allowing to see the points were images, dinamic videos or static ones iwll be taken
 
 <img src="https://github.com/JordiLlaveria/FlutterDEE/blob/manager/assets/Execute%20Flight%20Plan.PNG" width="200" height="400">
