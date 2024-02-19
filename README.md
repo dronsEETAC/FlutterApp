@@ -84,7 +84,7 @@ When a flight plan is selected, it is shown inside the map, allowing to see the 
 
 The past flights screen allows you to select past flights and see the path as well as a video and image gallery 
 
-<img src="https://github.com/JordiLlaveria/FlutterDEE/blob/manager/assets/Past%20flight.PNG" width="200" height="400">
+![Past flight](https://github.com/dronsEETAC/FlutterApp/assets/100842082/2c3935be-4aed-4d17-b32f-9251cacbeb5a)
 
 For example, in the following picture two images can be seen, as it was expected to take one on waypoint number 1, and another in number 5
 
