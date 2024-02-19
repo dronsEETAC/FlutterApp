@@ -76,6 +76,7 @@ The select flight screen allows you to select flights plans from the database an
 When a flight plan is selected, it is shown inside the map, allowing to see the points were images, dinamic videos or static ones iwll be taken
 
 
+<img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/e039d10f-1d3c-4d5b-aa43-b4a726a367ec" width="200" height="400">
 
 The past flights screen allows you to select past flights and see the path as well as a video and image gallery 
 
