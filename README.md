@@ -51,7 +51,7 @@ flutter pub get
 ```
 Then you will need to make sure you have the emulator opened and running (in this case were using vscode)    
 <img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/42317fc9-dfd0-4c42-9e15-9e3ac6755bb0" width="200" height="400">
-<img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/305995914-929d94c7-34a5-4d96-83c1-e4b17a8e45f4" width="200" height="400">
+<img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/929d94c7-34a5-4d96-83c1-e4b17a8e45f4" width="200" height="400">
 
 Finally, you can run the following command to build the project
 ```
