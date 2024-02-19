@@ -62,7 +62,10 @@ flutter run
 
 When the project is running you should be met with the main map. in this window, you can click on the map to add waypoints and then click again around the initial waypoint to close the loop (it might take a few tries).
 
-![marker PNG](https://github.com/dronsEETAC/FlutterApp/assets/100842082/96225472-c1e8-4a8c-bbf3-1914ef44cb61)
+![marker PNG](https://github.com/dronsEETAC/FlutterApp/assets/100842082/96225472-c1e8-4a8c-bbf3-1914ef44cb61)    
+
+![mobile PNG](https://github.com/dronsEETAC/FlutterApp/assets/100842082/929d94c7-34a5-4d96-83c1-e4b17a8e45f4)
+
 
 <img src="https://github.com/Frixon21/FlutterFrontEndDEE/assets/72676967/390950c4-98d0-4f92-9f0a-d5dce27a64ba" width="200" height="400">
 
