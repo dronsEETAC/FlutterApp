@@ -91,7 +91,6 @@ For example, in the following picture two images can be seen, as it was expected
 ## Demo Flutter
 
 In order to be able to see a real simulation of an execution of a planned flight, the following demo performs the complete process of creating a flight plan:
-      
  [![DroneEngineeringEcosystem Badge](https://img.shields.io/badge/DEE-Demo_FlutterApp-pink.svg)](https://www.youtube.com/watch?v=AMLKRCThTbs&t=150s&ab_channel=DronsEETAC)
 
 In the video:
