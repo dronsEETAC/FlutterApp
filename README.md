@@ -82,7 +82,7 @@ The past flights screen allows you to select past flights and see the path as we
 
 <img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/2c3935be-4aed-4d17-b32f-9251cacbeb5a" width="200" height="400">
 
-For example, in the following picture two images can be seen, as it was expected to take one on waypoint number 1, and another in number 5
+For example, in the following picture two images can be seen, as it was expected to take one on waypoint number 1, and another in number 5    
 <img src="https://github.com/dronsEETAC/FlutterApp/assets/100842082/051f373c-45be-4e66-ba7b-b8a9894d45ca" width="200" height="400">
 
 ## Demo Flutter
