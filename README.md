@@ -49,9 +49,8 @@ You will first need to make sure you got all the dependencies by running
 ```
 flutter pub get
 ```
-Then you will need to make sure you have the emulator opened and running (in this case were using vscode)
-
-<img src="https://github.com/Frixon21/FlutterFrontEndDEE/assets/72676967/3a9a3860-7c4f-4197-aa70-740f5c9af5d0" width="300" height="600">
+Then you will need to make sure you have the emulator opened and running (in this case were using vscode)     
+![fight planner PNG](https://github.com/dronsEETAC/FlutterApp/assets/100842082/42317fc9-dfd0-4c42-9e15-9e3ac6755bb0)
 
 Finally, you can run the following command to build the project
 ```
